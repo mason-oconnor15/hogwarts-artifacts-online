@@ -14,7 +14,7 @@ public class HogwartsUser implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @NotEmpty(message="username is  required")
+    @NotEmpty(message="username is required")
     private String username;
 
     @NotEmpty(message = "password is required")
