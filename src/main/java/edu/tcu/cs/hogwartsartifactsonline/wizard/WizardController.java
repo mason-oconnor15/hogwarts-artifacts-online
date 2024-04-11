@@ -32,8 +32,8 @@ public class WizardController {
     @GetMapping()
     public Result findAllWizards(){
         List<Wizard> foundWizards = this.wizardService.findAll();
-        List<WizardDto>  WizardDtos = foundWizards.stream().map(this.wizardToWizardDtoConverter::convert).collect(Collectors.toList());
-        return new Result(true, StatusCode.SUCCESS, "Find All Success", WizardDtos);
+        List<WizardDto>  wizardDtos = foundWizards.stream().map(this.wizardToWizardDtoConverter::convert).collect(Collectors.toList());
+        return new Result(true, StatusCode.SUCCESS, "Find All Success", wizardDtos);
     }
     @PostMapping()
     public Result addWizard(@Valid @RequestBody WizardDto wizardDto){
